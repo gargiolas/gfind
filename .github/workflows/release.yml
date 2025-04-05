@@ -43,7 +43,7 @@ jobs:
       - name: Get version from .csproj
         id: get_version
         run: |
-          VERSION=$(grep -oP '(?<=<Version>)(.*)(?=</Version>)' src/GuidGeneratorCli/GuidGeneratorCli.csproj)
+          VERSION=$(grep -oP '(?<=<Version>)(.*)(?=</Version>)' src/GFindDI/GFindDI.csproj)
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
       
       # 5. Lista i file generati per il debug
