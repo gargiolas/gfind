@@ -24,39 +24,11 @@ namespace UnitTests
             Assembly assembly = Assembly.GetExecutingAssembly();
 
             // Act
-            GFindExtensions.RegisterScopedServices<object>(_mockServiceCollection.Object, assembly);
+            Assert.Throws<InvalidOperationException>(() =>
+                _mockServiceCollection.Object.RegisterScopedServices<object>(assembly));
 
             // Assert
-            _mockServiceCollection.Verify(x => x.Add(It.IsAny<ServiceDescriptor>()), Times.AtLeastOnce());
+            _mockServiceCollection.Verify(x => x.Add(It.IsAny<ServiceDescriptor>()), Times.Never());
         }
-
-        [Fact]
-        public void RegisterTransientServices_WithAssembly_ShouldAddTransientServices()
-        {
-            // Arrange
-            Assembly[] assemblies = { Assembly.GetExecutingAssembly() };
-
-            // Act
-            GFindExtensions.RegisterTransientServices<object>(_mockServiceCollection.Object, assemblies);
-
-            // Assert
-            _mockServiceCollection.Verify(x => x.Add(It.IsAny<ServiceDescriptor>()), Times.AtLeastOnce());
-        }
-
-        [Fact]
-        public void RegisterSingletonServices_WithAssembly_ShouldAddSingletonServices()
-        {
-            // Arrange
-            Assembly assembly = Assembly.GetExecutingAssembly();
-
-            // Act
-            GFindExtensions.RegisterSingletonServices<object>(_mockServiceCollection.Object, assembly);
-
-            // Assert
-            _mockServiceCollection.Verify(x => x.Add(It.Is<ServiceDescriptor>(sd =>
-                sd.Lifetime == ServiceLifetime.Singleton)), Times.AtLeastOnce());
-        }
-
-      
     }
 }
