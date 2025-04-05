@@ -13,7 +13,6 @@
         "packagesPath": "C:\\Users\\giuse\\.nuget\\packages\\",
         "outputPath": "C:\\Lavoro\\GitHub\\gfind\\src\\GFindDI\\obj\\",
         "projectStyle": "PackageReference",
-        "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
           "C:\\Users\\giuse\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -47,24 +46,16 @@
           "dependencies": {
             "Colorful.Console": {
               "target": "Package",
-              "version": "[1.2.15, )",
-              "versionCentrallyManaged": true
+              "version": "[1.2.15, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[9.0.3, )",
-              "versionCentrallyManaged": true
+              "version": "[9.0.3, )"
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[9.0.3, )",
-              "versionCentrallyManaged": true
+              "version": "[9.0.3, )"
             }
-          },
-          "centralPackageVersions": {
-            "Colorful.Console": "1.2.15",
-            "Microsoft.Extensions.DependencyInjection": "9.0.3",
-            "Microsoft.Extensions.Logging.Abstractions": "9.0.3"
           },
           "imports": [
             "net461",
@@ -95,7 +86,6 @@
         "packagesPath": "C:\\Users\\giuse\\.nuget\\packages\\",
         "outputPath": "C:\\Lavoro\\GitHub\\gfind\\test\\GFindDITest\\obj\\",
         "projectStyle": "PackageReference",
-        "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [
           "C:\\Users\\giuse\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
@@ -137,8 +127,7 @@
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.20.72, )",
-              "versionCentrallyManaged": true
+              "version": "[4.20.72, )"
             },
             "coverlet.collector": {
               "target": "Package",
@@ -152,12 +141,6 @@
               "target": "Package",
               "version": "[2.5.3, )"
             }
-          },
-          "centralPackageVersions": {
-            "Colorful.Console": "1.2.15",
-            "Microsoft.Extensions.DependencyInjection": "9.0.3",
-            "Microsoft.Extensions.Logging.Abstractions": "9.0.3",
-            "Moq": "4.20.72"
           },
           "imports": [
             "net461",

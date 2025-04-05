@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Giuseppe Argiolas@2025")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("An implementation for register into DI all class that implement an interface")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f65277d98cbc52960ad3ee0cc591b154ab5cc4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+008075f68feb926d2afb8862c0dbdcd41d417763")]
 [assembly: System.Reflection.AssemblyProductAttribute("GFindDI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GFindDI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
