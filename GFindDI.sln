@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{87AFCA3A-8FF1-4B8E-ACB2-258C980B730E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GFindDI", "src\GFindDI\GFindDI.csproj", "{62E246D6-7D94-4535-BEBC-6ED353078179}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C4D4D481-B34C-4516-A83E-816085874BDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GFindDITest", "test\GFindDITest\GFindDITest.csproj", "{5941B8D5-6237-4880-A2FB-C33C1FDB9962}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62E246D6-7D94-4535-BEBC-6ED353078179} = {87AFCA3A-8FF1-4B8E-ACB2-258C980B730E}
+		{5941B8D5-6237-4880-A2FB-C33C1FDB9962} = {C4D4D481-B34C-4516-A83E-816085874BDF}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62E246D6-7D94-4535-BEBC-6ED353078179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E246D6-7D94-4535-BEBC-6ED353078179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E246D6-7D94-4535-BEBC-6ED353078179}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E246D6-7D94-4535-BEBC-6ED353078179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5941B8D5-6237-4880-A2FB-C33C1FDB9962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5941B8D5-6237-4880-A2FB-C33C1FDB9962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5941B8D5-6237-4880-A2FB-C33C1FDB9962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5941B8D5-6237-4880-A2FB-C33C1FDB9962}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

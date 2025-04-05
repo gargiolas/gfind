@@ -1,0 +1,64 @@
+﻿# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: Release to NuGet
+
+on:
+  push:
+    branches: [ "main" ]
+    tags:
+      - 'v*.*.*'  # Trigger solo se il push è un tag con il formato vX.Y.Z
+  #pull_request:
+  #  branches: [ "main" ]
+  #  tags:
+  #    - 'v*.*.*'  # Trigger solo se il push è un tag con il formato vX.Y.Z
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BUILD_CONFIG: Release
+
+    steps:
+      # 1. Effettua il checkout del codice sorgente
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      # 2. Configura la versione di .NET
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+      
+      # 3. Ripristina le dipendenze
+      - name: Restore dependencies
+        run: dotnet restore
+      
+      # 4. Compila il progetto
+      - name: Build
+        run: dotnet build -c $BUILD_CONFIG --no-restore
+      
+      # Usa il file .csproj per ottenere la versione
+      - name: Get version from .csproj
+        id: get_version
+        run: |
+          VERSION=$(grep -oP '(?<=<Version>)(.*)(?=</Version>)' src/GuidGeneratorCli/GuidGeneratorCli.csproj)
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+      
+      # 5. Lista i file generati per il debug
+      - name: Debug Build Output
+        run: ls -R ./src
+      
+      # 6. Esegui i test
+      - name: Test
+        run: dotnet test -c $BUILD_CONFIG --no-build --verbosity normal
+      
+      # 7. Crea il pacchetto NuGet nella directory `bin/Release`
+      - name: Pack NuGet package
+        run: dotnet pack --configuration Release --no-build --output ./nupkg /p:PackageVersion=${{ env.VERSION }}
+
+      - name: Push to NuGet
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: dotnet nuget push ./nupkg/*.nupkg -k $NUGET_API_KEY -s https://www.nuget.org/api/v2/package

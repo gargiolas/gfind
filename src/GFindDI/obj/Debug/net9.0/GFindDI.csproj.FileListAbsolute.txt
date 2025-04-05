@@ -1,0 +1,13 @@
+C:\Lavoro\GitHub\gfind\src\GFindDI\bin\Debug\net9.0\GFindDI.deps.json
+C:\Lavoro\GitHub\gfind\src\GFindDI\bin\Debug\net9.0\GFindDI.dll
+C:\Lavoro\GitHub\gfind\src\GFindDI\bin\Debug\net9.0\GFindDI.pdb
+C:\Lavoro\GitHub\gfind\src\GFindDI\obj\Debug\net9.0\GFindDI.csproj.AssemblyReference.cache
+C:\Lavoro\GitHub\gfind\src\GFindDI\obj\Debug\net9.0\GFindDI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Lavoro\GitHub\gfind\src\GFindDI\obj\Debug\net9.0\GFindDI.AssemblyInfoInputs.cache
+C:\Lavoro\GitHub\gfind\src\GFindDI\obj\Debug\net9.0\GFindDI.AssemblyInfo.cs
+C:\Lavoro\GitHub\gfind\src\GFindDI\obj\Debug\net9.0\GFindDI.csproj.CoreCompileInputs.cache
+C:\Lavoro\GitHub\gfind\src\GFindDI\obj\Debug\net9.0\GFindDI.sourcelink.json
+C:\Lavoro\GitHub\gfind\src\GFindDI\obj\Debug\net9.0\GFindDI.dll
+C:\Lavoro\GitHub\gfind\src\GFindDI\obj\Debug\net9.0\refint\GFindDI.dll
+C:\Lavoro\GitHub\gfind\src\GFindDI\obj\Debug\net9.0\GFindDI.pdb
+C:\Lavoro\GitHub\gfind\src\GFindDI\obj\Debug\net9.0\ref\GFindDI.dll
