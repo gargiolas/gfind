@@ -9,3 +9,7 @@ This library simplifies **dependency injection registration** by:
 4. Supporting extensibility by allowing multiple assemblies to be scanned.
 
 It’s especially useful in scenarios where there are many services implementing multiple interfaces, and you want a scalable, centralized way to handle DI registration.
+
+Example
+
+     services.RegisterScopedServices<IRandomService>(assemblies);
